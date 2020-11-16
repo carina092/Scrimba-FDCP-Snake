@@ -1,0 +1,18 @@
+html, body {
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.grid {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
+    background-color: darkseagreen;
+}
