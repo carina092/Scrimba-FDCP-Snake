@@ -1,14 +1,82 @@
-html, body {
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: "Helvetica", Arial, Sans-serif;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
-    padding: 10px;
+    background-image: url(image/fluffywhiteclouds.jpg); /* Credit to Freepik */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    margin: 50px 0 30px 0;
+}
+
+h1 {
+    font-size: 42px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #00182a;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #02355b;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#start {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F9C80E;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#start:hover {
+    background-color: #C69500;
+    transition: all 0.5s ease;
 }
 
 .grid {
+    margin: 50px 0;
     width: 200px;
     height: 200px;
-    border: 1px solid #000;
+    border: 1px solid #133B45;
+    border-radius: 2px;
     display: flex;
     flex-flow: row wrap;
+    background-color: #F8FFFF;
 }
 
 .square {
@@ -16,11 +84,12 @@ html, body {
     height: 20px;
 }
 
-.snake {
-    background-color: darkseagreen;
-    
+.snake::before {
+    display: block;
+    content: "🐍";
+    transform: scale(-1, 1);
 }
 
-.apple {
-    background-color: deepskyblue;
+.apple::before {
+    content: "🍎";
 }
